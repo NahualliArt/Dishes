@@ -1,13 +1,11 @@
 import logo from './assets/logo.svg';
 
 import Header from "./components/header";
+import NewDish from "./components/newDish";
 // import Dish, {Flag} from "./components/dish";
 import Dish, * as D from "./components/dish";
-
 import './styles/App.css';
 import { Component } from 'react';
-
-
 
 function App() {
   let dish = "tacos";
@@ -15,12 +13,8 @@ function App() {
    return (
      <div className="App">
        <Header/>
+       <NewDish />
        <Dish name={dish} qty="4"/>
-       Yo como { dish }
-       <ul>
-         {dishes.map(dish=><li>{dish}</li>)}
-       </ul>
-       <D.Flag/>
      </div>
    );
 }

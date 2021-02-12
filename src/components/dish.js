@@ -26,7 +26,6 @@ export class Ingredient extends Component{
         return(
             <Fragment>
                 <h4>Ingredientes</h4>
-                <h4>Ingredientes</h4>
             </Fragment>
         )
     }
@@ -34,16 +33,25 @@ export class Ingredient extends Component{
 
 
 class Dish extends Component{
+    ingredients = ["Tortilla", "Carne", "Cebolla"];
+    //metodo para contar 
+    countIngredients(){
+        return this.ingredients.length;
+    }
     render(){
         return(
             <div className="dish">
                 {/* <h1>Platillo</h1> */}
-                <h1>{ this.props.name }</h1>
-                {this.props.qty} 
-                <Ingredient />
+                <h1>{ this.props.name }</h1> 
+                <h3>{this.countIngredients()} Ingredientes</h3>
+                <ul>
+                    {this.ingredients.map( ingredient => (
+                        <li>{ingredient}</li>
+                    ))}
+                </ul>
                 {/* Gracias a la etiqueta Fragment ya no hay división adicional */}
                 <Button variant="contained" color="primary">
-                    Primary
+                    Elegir
                 </Button>
             </div>
         )
