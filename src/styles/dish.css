@@ -14,6 +14,8 @@ h4 {
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    background-color: darkblue;
+    background-color: SteelBlue;
     color: white;
+    border-style: none;
+    border-width: 0px;
 }
