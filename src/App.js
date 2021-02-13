@@ -3,7 +3,7 @@ import logo from './assets/logo.svg';
 import Header from "./components/header";
 import NewDish from "./components/newDish";
 // import Dish, {Flag} from "./components/dish";
-import Dish, * as D from "./components/dish";
+import Dish from "./components/dish";
 import './styles/App.css';
 import { Component } from 'react';
 

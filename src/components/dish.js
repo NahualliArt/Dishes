@@ -45,8 +45,9 @@ class Dish extends Component{
                 <h1>{ this.props.name }</h1> 
                 <h3>{this.countIngredients()} Ingredientes</h3>
                 <ul>
-                    {this.ingredients.map( ingredient => (
-                        <li>{ingredient}</li>
+                    {/* Cada que se utilice un iterador, se debe usar una KEY con un valor unico */}
+                    {this.ingredients.map( (ingredient, index) => (
+                        <li key={index}>{ingredient}</li>
                     ))}
                 </ul>
                 {/* Gracias a la etiqueta Fragment ya no hay división adicional */}
